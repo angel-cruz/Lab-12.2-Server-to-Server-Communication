@@ -40,6 +40,10 @@ app.get("/api/fun-fact", async (req, res) => {
     }
 
 });
+// Redirect the homepage to the fun fact API
+app.get("/", (req, res) => {
+    res.redirect("/api/fun-fact");
+});
 
 // Start the Express server
 app.listen(PORT, () => {
